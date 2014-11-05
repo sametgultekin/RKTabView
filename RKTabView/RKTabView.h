@@ -36,6 +36,8 @@ static inline HorizontalEdgeInsets HorizontalEdgeInsetsMake (CGFloat left, CGFlo
 @property (nonatomic, strong) NSArray *tabItems;
 @property (nonatomic, readwrite) HorizontalEdgeInsets horizontalInsets;
 
+@property (nonatomic, readwrite) CGFloat topLineAlpha;
+
 - (id)initWithFrame:(CGRect)frame andTabItems:(NSArray *)tabItems;
 
 - (RKTabItem *)selectedTabItem;

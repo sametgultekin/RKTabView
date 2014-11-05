@@ -77,6 +77,12 @@
     return _titlesFontColor;
 }
 
+
+- (void)setTopLineAlpha:(CGFloat)topLineAlpha {
+    _topLineAlpha = topLineAlpha;
+    [self setNeedsDisplay];
+}
+
 #pragma mark - Private
 
 - (void)cleanTabView {
@@ -342,8 +348,8 @@
         CGFloat darkLineWidth = 0.5f;
         CGFloat lightLineWidth = 0.5f;
         
-        UIColor *darkLineColor = [UIColor colorWithWhite:0.0f alpha:0.4f];
-        UIColor *lightLineColor = [UIColor colorWithWhite:0.5 alpha:0.4f];
+        UIColor *darkLineColor = [UIColor colorWithWhite:0.0f alpha:_topLineAlpha];
+        UIColor *lightLineColor = [UIColor colorWithWhite:0.5 alpha:_topLineAlpha];
         
         [self draWLineFromPoint:CGPointMake(0, darkLineWidth/2)
                         toPoint:CGPointMake(self.bounds.size.width, darkLineWidth/2)
