@@ -3,6 +3,7 @@
 
 #import "RKTabView.h"
 #import "RkTabItem.h"
+#import <FXBlurView/FXBlurView.h>
 
 #define DARKER_BACKGROUND_VIEW_TAG 33
 
@@ -27,6 +28,8 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.autoresizesSubviews = YES;
+        self.blurRadius = 70;
+        self.tintColor = [UIColor whiteColor];
     }
     return self;
 }
